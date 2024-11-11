@@ -17,7 +17,7 @@ const App = () => {
 
   // Function to change camera mode between front and back
   const changeCam = () => {
-    setCameraMode((prevMode) => (prevMode === 'user' ? 'environment' : 'user'));
+    setCameraMode((prevMode) => (prevMode === 'environment' ? 'user' : 'environment'));
   };
 
   useEffect(() => {
@@ -37,7 +37,7 @@ const App = () => {
   const videoConstraints = {
     width: dimension.width,
     height: dimension.height,
-    facingMode: 'user',
+    facingMode: cameramode,
   };
 
   // Function to capture and send the image
